@@ -1,9 +1,16 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="SwagLabs Suite">
-    <test name="SwagLabs Tests">
+<suite name="Test Automation">
+
+    <test name="myTests" parallel="classes" thread-count="1">
         <classes>
-            <class name="tests.LoginTest"/>
-            <class name="tests.ShoppingCartTest"/>
+
+            <listeners> <!-- Allure -->
+                <listener class-name="Steps.MyCustomListener"/>
+            </listeners>
+            <!--                <class name="Lecture13.MyTestsOne"/>-->
+            <!--                <class name="Lecture13.MyTestsSecond"/>-->
+            <!--                <class name="Lecture13.MyTestsThree"/>-->
+            <class name="Lecture15.ForAllureShowTest"/>
         </classes>
     </test>
+
 </suite>
